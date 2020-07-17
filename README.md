@@ -37,7 +37,7 @@ The following hardware components are used in this sample setup:
 	* [Hc-05 Bluetooth Module](https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR)
 * External Computer to upload code to Arduino
 ## Example System Diagram
-![./Pico-Bluetooth-Unity](System-Diagram.jpg)
+![](./Pico-Bluetooth-Unity/System-Diagram.jpg)
 ## Quickstart Steps
 1. Connect Ardunio hardware in the following Diagram, and upload the Arduino code from the Arduino-Bluetooth folder onto the board. [Make sure that the cables connected to the TX and RX ports on the Arduino are not connected when the code is being uploaded](https://www.quora.com/How-can-I-overcome-upload-error-in-Arduino-Uno), and re-connect them once the code is finished uploading to the Arduino. After this step is completed, the bluetooth module LED should be blinking to indicate there is power going to the bluetooth module. 
 1. Pair the Pico Headset with the powered HC-05 Bluetooth module. To do this, navigate to **Settings> Advanced Settings > Bluetooth > Pair Bluetooth** from the Pico Headset home, and pair with the HC-05 module. The device only needs to be paired at this step; the app will establish connection between devices when run. Make sure that the Pico G2 controller and the HC-05 module are the only devices paired to the Pico G2 Headset for this Quickstart tutorial. The code can be modified to specify a specific device if multiple bluetooth devices are connected (see **Modifying Code** section). 
