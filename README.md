@@ -4,12 +4,17 @@ This documentation provides a system overview, quickstart, and expansion guide f
 **Table of Contents**
 * [About]
 * [Quickstart guide for example setup]
-	* [Sample System Components]
-	* [System Diagram]
-	* [Quickstart Steps]
-* [Adding a Modular Component]
-  * [Adding Arduino to Pico communication]
-  * [Adding Pico to Arduino communication]
+	* [Example System Components]
+	* [Example Macro System Diagram]
+	* [Example Arduino System Diagram]
+	* [## Quickstart Steps]
+* [Modifying Code]
+  * [Modifying Pico To Arduino Communication]
+  	* [Connecting More than One Bluetooth Device]
+	* [Changing Data Sent from Pico to Arduino]
+  * [Modifying Arduino to Pico Communication]
+  	* [Changing Data Sent From Arduino to Pico]
+	* [Changing How the Pico Headset Interprets Received Data]
 
 
 # About
