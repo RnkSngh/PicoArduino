@@ -1,48 +1,49 @@
 #include <Wire.h>
 #include "Adafruit_DRV2605.h"
 
-Adafruit_DRV2605 drv;
+Adafruit_DRV2605 g_Drv; //the connected driver
 
 
 // constants won't change. They're used here to set pin numbers:
-const int capacitivePin = 4;     // the number of the button pin
-int buttonState = 0;
+const int CAPACITIVE_PIN = 4;     // the input port pin on arduino used to send the capacitive sensor signal
+int g_ButtonState = 0; //button state of the capacitive sensor
   
-  
-int waveindex=64;
-char read_char; //char that is read from bluetooth connection
-uint8_t read_int;
+char g_ReadChar; //char that is read from bluetooth connection
+
+
+//set up is executed once at the start of the script, imilar to Unity's Start() function
 void setup () {
 
-  Serial.begin(9600);
-  pinMode(capacitivePin, INPUT);
+  Serial.begin(9600); //begin serial communication at 9600 baud rate
+  pinMode(CAPACITIVE_PIN, INPUT); //set pin 4 to input mode
 
-  drv.begin();
-  drv.selectLibrary(1);
-  drv.setMode(DRV2605_MODE_INTTRIG); 
+//begin drv driver and set library
+  g_Drv.begin();
+  g_Drv.selectLibrary(1);
+  g_Drv.setMode(DRV2605_MODE_INTTRIG); 
 
 }
 
-uint8_t effect = 64;
-
-
-void send_haptic_feedback( int Waveform){
+// SendHapticFeedback triggers a vibration sequence in the motor using the Adafruit DRV driver.
+// Waveform is an interger between 1-123 corresponding to a waveform ID for a vibration sequence (see Adafruit Haptic Feedback Driver documentation)
+void SendHapticFeedback( int Waveform){
     // set the effect to play
     Serial.print(Waveform);
-  drv.setWaveform(0, Waveform);  // play effect 
-  drv.setWaveform(1, 0);       // end waveform
+  g_Drv.setWaveform(0, Waveform);  // play effect 
+  g_Drv.setWaveform(1, 0);       // end waveform
 
   // play the effect!
-  drv.go();
+  g_Drv.go();
     delay(100);
 }
 
-void loop() {
+// loop function continues endlessly, similar to Unity's Update() function
+void loop() { 
 
-  buttonState = digitalRead(capacitivePin);
-  if (buttonState){ // if cap button is pressed
+  g_ButtonState = digitalRead(CAPACITIVE_PIN);
+  if (g_ButtonState){ // if cap button is pressed
       Serial.print(2);
-      Serial.print("\n"); //send \n because it was set as the token delineator
+      Serial.print("\n"); //send \n because it was set as the token delineator for the Pico headset
       
   }
   else{
@@ -51,13 +52,11 @@ void loop() {
   }
   
 
-  
-  if(Serial.available()){ // means hap feedback will be triggered
-    read_char = (char) Serial.read();
-
-    //map read char to proper haptic feedback range
-    send_haptic_feedback(118- read_char);
-
+  //check if the bluetooth module is sending any data to arduino, and convert the ASCII byte to a WaveForm ID to be passed to the SendHapticFeedback function
+  if(Serial.available()){ 
+    g_ReadChar = (char) Serial.read(); //read the sent ASCII byte representation. The pico headset only sends intergers between 1-6, which correspond to ASCII bytes 49-54
+    SendHapticFeedback(118 - g_ReadChar); //map bytes 49-54 to the waveform ID between 64-69, which correspond to hums of varying intensity
   }
-  delay(200);
+  
+  delay(200); //add 0.2 second delay for stability
 }
