@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/User/Downloads/controllerState0623/controllerState/iuy.apk
+C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Pico-Arduino-Controller.apk
 SceneListBegin?
 Assets/PicoMobileSDK/Pvr_Controller/Scenes/Pvr_Controller_UI 1.unity
 SceneListEnd?
@@ -60,8 +60,6 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 b781a773288c3e597253ab74cc02ee9c Assembly-CSharp.dll:.Pvr_UIPointer
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
 7a8f96252ccf61fb992335394bba10d5 Unity.UIWidgets.dll:Unity.UIWidgets.engine.raycast.UIWidgetsRaycastablePanel
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button

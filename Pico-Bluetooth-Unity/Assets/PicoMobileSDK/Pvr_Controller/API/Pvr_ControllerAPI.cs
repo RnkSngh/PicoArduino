@@ -232,8 +232,11 @@ namespace Pvr_UnitySDKAPI
             }
             return new Quaternion(0, 0, 0, 1);
         }
-        
-        //read capacitive button device data if available from bluetooth
+
+        /// <summary>
+        /// Get the ASCII byte array of data available on a connected bluetooth device
+        /// </summary>
+        /// <param name="device"> The bluetooth device to check available data on </param>
         public static byte[] UPvr_GetCapacative_button(BluetoothDevice device)
         {
             byte[] msg = device.read();//because we called setEndByte(10)..read will always return a packet excluding the last byte 10.

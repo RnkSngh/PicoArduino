@@ -534,7 +534,6 @@ MonoBehaviour:
   Left_controllerQuaternion: {fileID: 1440988151}
   Left_Dir: {fileID: 506793485}
   Bluetooth: {fileID: 163591035}
-  Bluetooth2: {fileID: 176467911}
   Right_keyName: {fileID: 0}
   Right_keyState: {fileID: 0}
   Right_controllerPos: {fileID: 0}
@@ -1093,7 +1092,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 258217052}
-        m_MethodName: Adjust_HapFeedback
+        m_MethodName: AdjustHapFeedback
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

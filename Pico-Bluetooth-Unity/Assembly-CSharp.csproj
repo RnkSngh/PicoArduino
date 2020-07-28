@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B6FFD23D-8F4F-0564-C2E0-A2A25F32BACA}</ProjectGuid>
+    <ProjectGuid>{D5824DB2-055E-C011-EEB2-54FE287815FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -158,37 +158,37 @@
     <None Include="Assets\BT_Library\Demos\Automatic Connection\ReadMe.txt" />
     <None Include="Assets\BT_Library\Demos\ReadMe.txt" />
     <Reference Include="Unity.DocZh.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.DocZh.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.UIWidgets.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.UIWidgets.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.UIWidgets">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.UIWidgets.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Messenger.Editor">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.Messenger.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.023">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.023.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.024">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.024.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -389,10 +389,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.23f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Assets/Plugins/LitJson.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Assets/Plugins/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/User/Downloads/controllerState0623/controllerState/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/User/OneDrive/Projects/Pico Interactive Next Gen Controller/Pico-Project-Update/Pico-Bluetooth-Unity/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

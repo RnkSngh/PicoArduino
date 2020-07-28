@@ -25,8 +25,8 @@ public class VisualController : MonoBehaviour
     public Text Left_controllerQuaternion;
 
     public Text Left_Dir;
-    public Text Bluetooth;
-    public Text Bluetooth2;
+
+    public Text Bluetooth; //holds the text received from the hc-05 bluetooth module
 
     public Text Right_keyName;
     public Text Right_keyState;
@@ -36,6 +36,7 @@ public class VisualController : MonoBehaviour
 
     public GameObject ctr0;
     public GameObject ctr1;
+
     public BluetoothDevice device; 
 
     void Awake()
@@ -54,15 +55,19 @@ public class VisualController : MonoBehaviour
             handness = UserHandNess.Right;
         }
 
-        //connect to bluetooth
+        //connect to hc-05 bluetooth adapter
         device = BluetoothAdapter.getPairedDevices()[0]; // assuming no other devices are connected. index might need to be changed if other devices are connected
-        device.setEndByte(10); //set newline  as the connection
+        device.setEndByte(10); //set newline as the token delineator
         device.normal_connect(true, false); //connect 
         
     }
 
-    //Sends data to arduino to trigger haptic feedback, called when slider value is changed
-    public void Adjust_HapFeedback(System.Single intensity)
+
+    /// <summary> AdjustHapFeedback converts a single to an ASCII byte array and sends the byte array to the Arduino when the slider value is changed in the UI. 
+    /// This data is used to trigger the Arduino haptic feedback module. 
+    /// </summary>
+    /// <param name="intensity">Indicates the haptic feedback intensity, which is set by the UI slider.</param>
+    public void AdjustHapFeedback(System.Single intensity)
     {
         //convert byte to ascii and send
         byte intensity_ascii = (byte)intensity.ToString()[0];
@@ -70,6 +75,36 @@ public class VisualController : MonoBehaviour
         
     }
 
+    /// <summary> ReadArduinoData checks if there is any data being sent from the Arduino. The data is received in the form of an ASCII byte array, and corresponds to the state 
+    /// of the capacitive button. The function returns a string corresponding to the state of the capacitive button, which is used to change a text field in the UI. 
+    /// </summary>
+    public string ReadArduinoData()
+    {
+        // Read if data is available from Arduino
+        byte[] msg = Controller.UPvr_GetCapacative_button(device);
+        if ((msg != null) && (msg.Length > 0))
+        {
+            //Convert ASCII Byte array to literal string
+            string content = System.Text.ASCIIEncoding.ASCII.GetString(msg);
+
+            //Decode literal string
+            if (content.Contains("3")) 
+            {
+                return "not pressed";
+            }
+            else if (content.Contains("2"))
+            {
+                return "pressed";
+            }
+
+        }
+
+         return Bluetooth.text; //UI text is unchanged if no new information is received
+
+    }
+
+    /// <summary> CheckControllerState reads the button states from the Pico G2 buttons and updates the UI 
+    /// </summary>
     void CheckControllerState()
     {
         
@@ -145,27 +180,10 @@ public class VisualController : MonoBehaviour
 
         Left_controllerPos.text = Controller.UPvr_GetControllerPOS(0).ToString();
         Left_controllerQuaternion.text = Controller.UPvr_GetControllerQUA(0).ToString();
-        //Bluetooth2.text = Bluetooth.text;
 
-      // Read if data is available 
-        byte[] msg = Controller.UPvr_GetCapacative_button(device);
-        if (msg != null && msg.Length > 0)
-        {
-            //Convert Byte array to string
-            string content = System.Text.ASCIIEncoding.ASCII.GetString(msg);
+        //change UI to reflect current state of capacitive button
+        Bluetooth.text = ReadArduinoData();
 
-            //change UI text
-            if (content.Contains("3"))
-            {
-                Bluetooth.text = "not pressed";
-            }
-            else if(content.Contains("2"))
-            {
-                Bluetooth.text = "pressed";
-            }
-       }
-
-            
     }
 
     private void Update()
@@ -180,6 +198,8 @@ public class VisualController : MonoBehaviour
         Pvr_ControllerManager.ChangeMainControllerCallBackEvent -= MainControllerChanged;
         Pvr_ControllerManager.ChangeHandNessCallBackEvent -= HandnessChanged;
     }
+
+
     private void MainControllerChanged(string index)
     {
         RefreshHandness();
@@ -190,6 +210,7 @@ public class VisualController : MonoBehaviour
         RefreshHandness();
     }
 
+
     private void ServiceStartSuccess()
     {
         RefreshHandness();
@@ -197,11 +218,11 @@ public class VisualController : MonoBehaviour
         {
             if (Controller.UPvr_GetControllerState(0) == ControllerState.Connected)
             {
-                controller0is3dof = Controller.UPvr_GetControllerAbility(0) == 1;
+                controller0is3dof = ( Controller.UPvr_GetControllerAbility(0) == 1 );
             }
             if (Controller.UPvr_GetControllerState(1) == ControllerState.Connected)
             {
-                controller1is3dof = Controller.UPvr_GetControllerAbility(1) == 1;
+                controller1is3dof = ( Controller.UPvr_GetControllerAbility(1) == 1 );
             }
         }
 
@@ -216,7 +237,7 @@ public class VisualController : MonoBehaviour
     }
     public static void ChangeHandNess()
     {
-        handness = handness == UserHandNess.Right ? UserHandNess.Left : UserHandNess.Right;
+        handness =   handness ==   UserHandNess.Right  ? UserHandNess.Left : UserHandNess.Right  ;
     }
     private void CheckControllerState(string data)
     {
@@ -227,11 +248,11 @@ public class VisualController : MonoBehaviour
         {
             if (id == 0)
             {
-                controller0is3dof = ability == 1;
+                controller0is3dof = ( ability == 1 );
             }
             if (id == 1)
             {
-                controller1is3dof = ability == 1;
+                controller1is3dof = ( ability == 1 );
                 RefreshHandness();
             }
         }
