@@ -3,18 +3,18 @@ This documentation provides a system overview, quickstart, and expansion guide f
 
 **Table of Contents**
 * [About](#About)
-* [Quickstart guide for example setup]
-	* [Example System Components]
-	* [Example Macro System Diagram]
-	* [Example Arduino System Diagram]
-	* [## Quickstart Steps]
-* [Modifying Code]
-  * [Modifying Pico To Arduino Communication]
-  	* [Connecting More than One Bluetooth Device]
-	* [Changing Data Sent from Pico to Arduino]
-  * [Modifying Arduino to Pico Communication]
-  	* [Changing Data Sent From Arduino to Pico]
-	* [Changing How the Pico Headset Interprets Received Data]
+* [Quickstart guide for example setup](#Quickstart-guide-for-example-setup)
+	* [Example System Components](#Example-System-Components)
+	* [Example Macro System Diagram](#Example-Macro-System-Diagram)
+	* [Example Arduino System Diagram](#Example-Arduino-System-Diagram)
+	* [## Quickstart Steps](#Quickstart-Steps)
+* [Implementation Details](#Implementation-Details)
+  * [Pico Headset Software](#Pico-Headset-Software)
+  	* [Connecting to Bluetooth Device](#Connecting-to-Bluetooth-Device)
+	* [Sending Data from Pico to Arduino](#Sending-Data-from-Pico-to-Arduino)
+  * [Arduino Software](Arduino-Software)
+  	* [Sending data From Arduino to Pico](#Sending-Data-from-Arduino-to-Pico)
+	* [Processing Received Arduino Data](#Processing-Received-Arduino-Data)
 
 
 # About
@@ -99,7 +99,7 @@ device.send(new byte[]{ intensity_ascii}); //send byte array to bluetooth device
 ```
 
 ## Arduino Software
-### Sending data from Arduino to Pico
+### Sending Data from Arduino to Pico
 Data is sent from Arduino in the Arduino-bluetooth.ino file in the Arduino-bluetooth folder. The sent data can be changed by modifying the input to the ```Serial.print()``` function in the ```loop()``` function: 
 ```
   if (g_ButtonState){ // if cap button is pressed
@@ -112,7 +112,7 @@ Data is sent from Arduino in the Arduino-bluetooth.ino file in the Arduino-bluet
     Serial.print("\n");
   }
 ```
-### Changing How the Pico Headset Interprets Received Data
+### Processing Received Arduino Data
 The Pico headset processes the data using the ```ReadArduinoData()``` method in the VisualController.cs file. The ```Serial.print()``` function from the Arduino in the above section sends a byte array to the Pico Headset. This byte array is converted to ASCII representation, and the ```Bluetooth.text variable``` is changed to match the state of the capacitive button, which is in turn updated in the UI canvas. 
 ```
 public string ReadArduinoData()
