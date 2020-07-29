@@ -2,7 +2,7 @@
 This documentation provides a system overview, quickstart, and expansion guide for establishing 2-way Bluetooth communication between Arduino and the Pico headset. The included code is a Unity project that works with the example setup, and can be modified modularly to include other Arduino components. 
 
 **Table of Contents**
-* [About]
+* [About](#About)
 * [Quickstart guide for example setup]
 	* [Example System Components]
 	* [Example Macro System Diagram]
