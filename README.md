@@ -7,7 +7,7 @@ This documentation provides a system overview, quickstart, and expansion guide f
 	* [Example System Components](#Example-System-Components)
 	* [Example Macro System Diagram](#Example-Macro-System-Diagram)
 	* [Example Arduino System Diagram](#Example-Arduino-System-Diagram)
-	* [## Quickstart Steps](#Quickstart-Steps)
+	* [Quickstart Steps](#Quickstart-Steps)
 * [Implementation Details](#Implementation-Details)
   * [Pico Headset Software](#Pico-Headset-Software)
   	* [Connecting to Bluetooth Device](#Connecting-to-Bluetooth-Device)
@@ -75,7 +75,7 @@ The connection to bluetooth will be established in the next step. Make sure that
 # Implementation Details
 This section goes over the key parts in the Arduino and Pico Headset code. 
 ## Pico Headset Software
-The Arduino-Bluetooth-Controller.apk file for communication from the Pico Headset was built using the Pico-Bluetooth-Unity project folder (see README in the folder for more details). This code can directly be opened as a unity project from the Unity Hub. The folder structure is similar to the structure from that created by the [Pico VR Quickstart of SDK access guide](https://sdk.picovr.com/docs/sdk/en/chapter_four.html), with some added files for the UI canvas and the bluetooth module. Most of the bluetooth communication code is added in the VisualController.cs file in the **Pico-Bluetooth-Unity > Assets > Projects** folder.
+The Arduino-Bluetooth-Controller.apk file for communication from the Pico Headset was built using the Pico-Bluetooth-Unity project folder (see README in the folder for more details). This code can directly be opened as a unity project from the Unity Hub. The folder structure is similar to the structure from that created by the [Pico VR Quickstart of SDK access guide](https://sdk.picovr.com/docs/sdk/en/chapter_four.html), with some added files for the UI canvas and the bluetooth module. Most of the bluetooth communication code is added in the [VisualController.cs](./Pico-Bluetooth-Unity/Assets/Project/VisualController.cs) file in the **Pico-Bluetooth-Unity > Assets > Projects** folder.
 ### Connecting to Bluetooth Device
 The connection to the HC-05 module is established in the start function in the VisualController.cs file (shown below). If multiple devices are connected and a specific device needs to be specified, the index of the device can be found by iterating through the devices array and printing the name of each device by accessing the ```device.Name ``` variable for each device. Once the index of the specific device is found, it can be used to acess the device from the devices list. 
  
@@ -100,7 +100,7 @@ device.send(new byte[]{ intensity_ascii}); //send byte array to bluetooth device
 
 ## Arduino Software
 ### Sending Data from Arduino to Pico
-Data is sent from Arduino in the Arduino-bluetooth.ino file in the Arduino-bluetooth folder. The sent data can be changed by modifying the input to the ```Serial.print()``` function in the ```loop()``` function: 
+Data is sent from Arduino in the [Arduino-bluetooth.ino](./Arduino-bluetooth/Arduino-bluetooth.ino) file in the Arduino-bluetooth folder. The sent data can be changed by modifying the input to the ```Serial.print()``` function in the ```loop()``` function: 
 ```
   if (g_ButtonState){ // if cap button is pressed
       Serial.print(2);
