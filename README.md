@@ -47,7 +47,8 @@ The following hardware components are used in this sample setup:
 ![](./Pico-Bluetooth-Unity/Arduino-System-Design.png)
 ## Quickstart Steps
 1. Set up the Arduino System as shown in the figure above. The physical setup might look like the picture below: 
-![](./Pico-Bluetooth-Unity/Arduino-Setup.jpg)
+![](./Pictures/Arduino-Setup.jpg)
+
 Connect the arduino to the computer and upload the code in the Arduino-Bluetooth folder onto the Arduino board. [Make sure that the cables connected to the TX and RX ports on the Arduino are not connected when the code is being uploaded](https://www.quora.com/How-can-I-overcome-upload-error-in-Arduino-Uno), and re-connect them once the code is finished uploading to the Arduino. 
 
 ![](./Pictures/Arduino-Upload.png)
@@ -74,7 +75,7 @@ The connection to bluetooth will be established in the next step. Make sure that
 # Implementation Details
 This section goes over the key parts in the Arduino and Pico Headset code. 
 ## Pico Headset Software
-The Arduino-Bluetooth-Controller.apk file for communication from the Pico Headset was built using the Pico-Bluetooth-Unity project folder (see README in the folder for more details). This code can directly be opened as a unity project from the Unity Hub. The folder structure is similar to the structure from that created by the [Pico VR Quickstart of SDK access guide](https://sdk.picovr.com/docs/sdk/en/chapter_four.html), with some added files for the UI canvas and the bluetooth module. Most of the bluetooth communication code is added in the [VisualController.cs](./Pico-Bluetooth-Unity/Assets/Project/VisualController.cs) file in the **Pico-Bluetooth-Unity > Assets > Projects** folder.
+The Arduino-Bluetooth-Controller.apk file for communication from the Pico Headset was built using the Pico-Bluetooth-Unity project folder (see README in the folder for more details). This code can directly be opened as a Unity project from the Unity Hub. The folder structure is similar to the structure from that created by the [Pico VR Quickstart of SDK access guide](https://sdk.picovr.com/docs/sdk/en/chapter_four.html), with some added files for the UI canvas and the bluetooth module. Most of the bluetooth communication code is added in the [VisualController.cs](./Pico-Bluetooth-Unity/Assets/Project/VisualController.cs) file in the **Pico-Bluetooth-Unity > Assets > Projects** folder.
 ### Connecting to Bluetooth Device
 The connection to the HC-05 module is established in the start function in the VisualController.cs file (shown below). If multiple devices are connected and a specific device needs to be specified, the index of the device can be found by iterating through the devices array and printing the name of each device by accessing the ```device.Name ``` variable for each device. Once the index of the specific device is found, it can be used to acess the device from the devices list. 
  
@@ -87,7 +88,7 @@ device.normal_connect(true, false);
 ```
 
 ### Sending Data from Pico to Arduino
-The ``` Adjust_HapFeedback ``` function in the VisualController.cs file is called whenever the value is changed for the slider on the UI canvas in the Headset - this was done by [linking the slider in unity with the ```OnValueChanged() ``` function](https://www.youtube.com/watch?v=HQ8Tttcksu4&t=4s). The function converts the interger character given by the slider to the ASCII byte representation, and sends the byte array to the bluetooth module (more bytes can be added to the array if multiple characters are sent each iteration). 
+The ``` Adjust_HapFeedback ``` function in the VisualController.cs file is called whenever the value is changed for the slider on the UI canvas in the Headset - this was done by [linking the slider in Unity with the ```OnValueChanged() ``` function](https://www.youtube.com/watch?v=HQ8Tttcksu4&t=4s). The function converts the interger character given by the slider to the ASCII byte representation, and sends the byte array to the bluetooth module (more bytes can be added to the array if multiple characters are sent each iteration). 
 ```
 public void Adjust_HapFeedback(System.Single intensity)
 {
