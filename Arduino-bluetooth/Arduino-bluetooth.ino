@@ -4,14 +4,14 @@
 Adafruit_DRV2605 g_Drv; //the connected driver
 
 
-// constants won't change. They're used here to set pin numbers:
-const int CAPACITIVE_PIN = 4;     // the input port pin on arduino used to send the capacitive sensor signal
+//constants won't change, they're used here to set pin numbers:
+const int CAPACITIVE_PIN = 4;     // the input port pin on Arduino used to send the capacitive sensor signal
 int g_ButtonState = 0; //button state of the capacitive sensor
   
 char g_ReadChar; //char that is read from bluetooth connection
 
 
-//set up is executed once at the start of the script, imilar to Unity's Start() function
+//set up is executed once at the start of the script, similar to Unity's Start() function
 void setup () {
 
   Serial.begin(9600); //begin serial communication at 9600 baud rate
@@ -52,9 +52,9 @@ void loop() {
   }
   
 
-  //check if the bluetooth module is sending any data to arduino, and convert the ASCII byte to a WaveForm ID to be passed to the SendHapticFeedback function
+  //check if the bluetooth module is sending any data to Arduino, and convert the ASCII byte to a WaveForm ID to be passed to the SendHapticFeedback function
   if(Serial.available()){ 
-    g_ReadChar = (char) Serial.read(); //read the sent ASCII byte representation. The pico headset only sends intergers between 1-6, which correspond to ASCII bytes 49-54
+    g_ReadChar = (char) Serial.read(); //read the sent ASCII byte representation. The Pico headset only sends intergers between 1-6, which correspond to ASCII bytes 49-54
     SendHapticFeedback(118 - g_ReadChar); //map bytes 49-54 to the waveform ID between 64-69, which correspond to hums of varying intensity
   }
   
