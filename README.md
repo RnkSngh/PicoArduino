@@ -55,8 +55,7 @@ Connect the arduino to the computer and upload the code in the Arduino-Bluetooth
 After this step is completed, the bluetooth module LED should be blinking to indicate there is power going to the bluetooth module. Note that the color of the bluetooth LED might differ between HC-05 modules; some bluetooth modules might be blinking green or blue.  
 2. Pair the Pico Headset with the powered HC-05 Bluetooth module - navigate to **Settings> Advanced Settings > Bluetooth > Pair Bluetooth**, and select "HC-05" (see screenshots below).
 
-![](./Pictures/Pico-Pair-1.png)
-![](./Pictures/Pico-Pair-2.png)
+![](./Pictures/Pico-Pair-1-updated.png)
 ![](./Pictures/Pico-Pair-3.png)
 ![](./Pictures/Pico-Pair-4.png)
 ![](./Pictures/Pico-Pair-5.png)
