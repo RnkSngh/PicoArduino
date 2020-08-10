@@ -1,4 +1,4 @@
-# Pico-Interactive-Arduino-Controller
+# Pico-Arduino Bluetooth Communication
 This documentation provides a system overview, quickstart, and expansion guide for establishing 2-way Bluetooth communication between Arduino and the Pico headset. The included code is a Unity project that works with the example setup, and can be modified modularly to include other Arduino components. 
 
 **Table of Contents**
@@ -42,7 +42,7 @@ The following hardware components are used in this sample setup:
 	* [Hc-05 Bluetooth Module](https://www.amazon.com/HiLetgo-Wireless-Bluetooth-Transceiver-Arduino/dp/B071YJG8DR) ([Hardware Documentation](https://www.gme.cz/data/attachments/dsh.772-148.1.pdf))
 * External Computer to upload code to Arduino
 ## Example Macro System Diagram
-![](./Pico-Bluetooth-Unity/System-Diagram.svg)
+![](./Pictures/System-Design.svg)
 ## Example Arduino System Diagram
 ![](./Pico-Bluetooth-Unity/Arduino-System-Design.png)
 ## Quickstart Steps
@@ -67,7 +67,7 @@ If prompted for a pin, enter "1234":
 ![](./Pictures/Pico-Pair-7.png)
 
  To check that the module is paired correctly, the module should appear in the "paired devices" section in bluetooth settings:
-![](./Pictures/Pico-Pair-8.png)
+![](./Pictures/Bluetooth.png)
 
 The connection to bluetooth will be established in the next step. Make sure that the Pico controller and the HC-05 module are the only devices paired to the Pico Headset for this Quickstart tutorial. The code can be modified to specify a specific device if multiple bluetooth devices are connected (see **Modifying Code** section). 
 3. Launch the app by transfering the Arduino-Bluetooth-Controller.apk file onto Pico Headset, and running the file. Once the app starts, the LED on the bluetooth module should change from blinking continously to [pausing between blinks](https://www.youtube.com/watch?v=BXXAcFOTnBo), to indicate that the bluetooth has connected to the headset. After connection has been established to the bluetooth, the UI canvas will indicate when the capacitive button is pressed, and changing the slider will trigger the motor connected to the arduino. 
