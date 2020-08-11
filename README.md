@@ -2,19 +2,20 @@
 This documentation provides a system overview, quickstart, and expansion guide for establishing 2-way Bluetooth communication between Arduino and the Pico headset. The included code is a Unity project that works with the example setup, and can be modified modularly to include other Arduino components. 
 
 **Table of Contents**
-* [About](#About)
-* [Quickstart guide for example setup](#Quickstart-guide-for-example-setup)
-	* [Example System Components](#Example-System-Components)
-	* [Example Macro System Diagram](#Example-Macro-System-Diagram)
-	* [Example Arduino System Diagram](#Example-Arduino-System-Diagram)
-	* [Quickstart Steps](#Quickstart-Steps)
-* [Implementation Details](#Implementation-Details)
-  * [Pico Headset Software](#Pico-Headset-Software)
-  	* [Connecting to Bluetooth Device](#Connecting-to-Bluetooth-Device)
-	* [Sending Data from Pico to Arduino](#Sending-Data-from-Pico-to-Arduino)
-  * [Arduino Software](Arduino-Software)
-  	* [Sending data From Arduino to Pico](#Sending-Data-from-Arduino-to-Pico)
-	* [Processing Received Arduino Data](#Processing-Received-Arduino-Data)
+- [Pico-Arduino Bluetooth Communication](#pico-arduino-bluetooth-communication)
+- [About](#about)
+- [Quickstart guide for example setup](#quickstart-guide-for-example-setup)
+  - [Example System Components](#example-system-components)
+  - [Example Macro System Diagram](#example-macro-system-diagram)
+  - [Example Arduino System Diagram](#example-arduino-system-diagram)
+  - [Quickstart Steps](#quickstart-steps)
+- [Implementation Details](#implementation-details)
+  - [Pico Headset Software](#pico-headset-software)
+    - [Connecting to Bluetooth Device](#connecting-to-bluetooth-device)
+    - [Sending Data from Pico to Arduino](#sending-data-from-pico-to-arduino)
+  - [Arduino Software](#arduino-software)
+    - [Sending Data from Arduino to Pico](#sending-data-from-arduino-to-pico)
+    - [Processing Received Arduino Data](#processing-received-arduino-data)
 
 
 # About
@@ -54,6 +55,7 @@ Connect the arduino to the computer and upload the code in the Arduino-Bluetooth
 ![](./Pictures/Arduino-Upload.png)
 
 After this step is completed, the bluetooth module LED should be blinking to indicate there is power going to the bluetooth module. Note that the color of the bluetooth LED might differ between HC-05 modules; some bluetooth modules might be blinking green or blue.  
+
 2. Pair the Pico Headset with the powered HC-05 Bluetooth module - navigate to **Settings> Advanced Settings > Bluetooth > Pair Bluetooth**, and select "HC-05" (see screenshots below).
 
 ![](./Pictures/Pico-Pair-1-updated.png)
@@ -70,6 +72,7 @@ If prompted for a pin, enter "1234":
 ![](./Pictures/Bluetooth.png)
 
 The connection to bluetooth will be established in the next step. Make sure that the Pico controller and the HC-05 module are the only devices paired to the Pico Headset for this Quickstart tutorial. The code can be modified to specify a specific device if multiple bluetooth devices are connected (see **Modifying Code** section). 
+
 3. Launch the app by transfering the Arduino-Bluetooth-Controller.apk file onto Pico Headset, and running the file. Once the app starts, the LED on the bluetooth module should change from blinking continously to [pausing between blinks](https://www.youtube.com/watch?v=BXXAcFOTnBo), to indicate that the bluetooth has connected to the headset. After connection has been established to the bluetooth, the UI canvas will indicate when the capacitive button is pressed, and changing the slider will trigger the motor connected to the arduino. 
 
 # Implementation Details
@@ -77,7 +80,7 @@ This section goes over the key parts in the Arduino and Pico Headset code.
 ## Pico Headset Software
 The Arduino-Bluetooth-Controller.apk file for communication from the Pico Headset was built using the Pico-Bluetooth-Unity project folder (see README in the folder for more details). This code can directly be opened as a Unity project from the Unity Hub. The folder structure is similar to the structure from that created by the [Pico VR Quickstart of SDK access guide](https://sdk.picovr.com/docs/sdk/en/chapter_four.html), with some added files for the UI canvas and the bluetooth module. Most of the bluetooth communication code is added in the [VisualController.cs](./Pico-Bluetooth-Unity/Assets/Project/VisualController.cs) file in the **Pico-Bluetooth-Unity > Assets > Projects** folder.
 ### Connecting to Bluetooth Device
-The connection to the HC-05 module is established in the start function in the VisualController.cs file (shown below). If multiple devices are connected and a specific device needs to be specified, the index of the device can be found by iterating through the devices array and printing the name of each device by accessing the ```device.Name ``` variable for each device. Once the index of the specific device is found, it can be used to acess the device from the devices list. 
+The connection to the HC-05 module is established in the start function in the VisualController.cs file (shown below). If multiple devices are connected and a specific device needs to be specified, the index of the device can be found by iterating through the devices array and printing the name of each device by accessing the ```device.Name ``` variable for each device. Once the index of the specific device is found, it can be used to access the device from the devices list. 
  
 ```
 //Connect to bluetooth Module
@@ -113,7 +116,7 @@ Data is sent from Arduino in the [Arduino-bluetooth.ino](./Arduino-bluetooth/Ard
   }
 ```
 ### Processing Received Arduino Data
-The Pico headset processes the data using the ```ReadArduinoData()``` method in the VisualController.cs file. The ```Serial.print()``` function from the Arduino in the above section sends a byte array to the Pico Headset. This byte array is converted to ASCII representation, and the ```Bluetooth.text variable``` is changed to match the state of the capacitive button, which is in turn updated in the UI canvas. 
+The Pico headset processes the data using the ```ReadArduinoData()``` method in the VisualController.cs file. The ```Serial.print()``` function from the Arduino in the above section sends a byte array to the Pico Headset. This byte array is converted to ASCII representation, and the ```Bluetooth.text``` variable is changed to match the state of the capacitive button, which is in turn updated in the UI canvas. 
 ```
 public string ReadArduinoData()
 {
