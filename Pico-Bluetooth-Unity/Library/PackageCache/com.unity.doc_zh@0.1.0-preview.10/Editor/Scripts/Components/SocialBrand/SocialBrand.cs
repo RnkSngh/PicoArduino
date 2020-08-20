@@ -1,27 +1,3 @@
-using System;
-using Unity.UIWidgets.gestures;
-using Unity.UIWidgets.ui;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class SocialBrand : StatefulWidget
-    {
-        public SocialBrand(
-            IconData data,
-            Color hoverColor,
-            Action<BuildContext> onTap)
-        {
-            _data = data;
-            _hoverColor = hoverColor;
-            _onTap = onTap;
-        }
-
-        private readonly IconData _data;
-
-        private readonly Color _hoverColor;
-
-        private readonly Action<BuildContext> _onTap;
-        public override State createState() => new SocialBrandState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d1a3c642621b84f6aa772ff2430c84ccb3d3573b97675d4a34bd3a5ae9753443
+size 656

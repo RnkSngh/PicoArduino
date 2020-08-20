@@ -1,7 +1,3 @@
-namespace Unity.UIWidgets.gestures {
-    public interface Drag {
-        void update(DragUpdateDetails details);
-        void end(DragEndDetails details);
-        void cancel();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4a9412011dc02f341ad62579c2141c415701f0d4fefc85bee65bd72c8ae36b8
+size 191

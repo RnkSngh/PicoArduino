@@ -1,24 +1,3 @@
-using Unity.UIWidgets.widgets;
-using UnityEngine;
-
-namespace Unity.DocZh.Components
-{
-    public partial class ScreenOverlay : StatefulWidget
-    {
-        public ScreenOverlay(Widget child)
-            : base(key: new ObjectKey("screen-overlay"))
-        {
-            _child = child;
-        }
-
-        private readonly Widget _child;
-
-        public override State createState() => new ScreenOverlayState();
-
-        public static ScreenOverlayState of(BuildContext buildContext) 
-        {
-            var ancestorState = buildContext?.ancestorStateOfType(new TypeMatcher<ScreenOverlayState>());
-            return (ScreenOverlayState) ancestorState;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:57fbb6d3e888a5971a3601a3a0b938b8932be43d01cacc4144b85526173d1936
+size 672

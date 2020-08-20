@@ -1,15 +1,3 @@
-﻿// Copyright  2015-2020 Pico Technology Co., Ltd. All Rights Reserved.
-
-
-using UnityEngine;
-
-#if UNITY_EDITOR
-[UnityEditor.CustomPropertyDrawer(typeof(Pvr_EnumFlags))]
-public class Pvr_EnumFlagsAttributeDrawer : UnityEditor.PropertyDrawer
-{
-    public override void OnGUI(Rect position, UnityEditor.SerializedProperty property, GUIContent label)
-    {
-        property.intValue = UnityEditor.EditorGUI.MaskField(position, label, property.intValue, property.enumNames);
-    }
-}
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9bfdccf24a84907647c594bff6e169b822e55b7c7efe702a19df606576fdd3a
+size 500

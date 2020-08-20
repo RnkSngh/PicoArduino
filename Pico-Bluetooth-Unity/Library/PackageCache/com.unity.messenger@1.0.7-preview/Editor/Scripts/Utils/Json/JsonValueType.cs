@@ -1,12 +1,3 @@
-﻿namespace Unity.Messenger.Json
-{
-	public enum JsonValueType : byte
-	{
-		Null = 0,
-		Boolean,
-		Number,
-		String,
-		Object,
-		Array,
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df4fa3b553740a858f67d3499533608da63b9bda29938588aba12afdb15eec19
+size 140

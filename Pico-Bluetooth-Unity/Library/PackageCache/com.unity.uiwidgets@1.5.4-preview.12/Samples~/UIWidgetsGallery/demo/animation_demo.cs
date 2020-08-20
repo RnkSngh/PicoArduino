@@ -1,15 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.widgets;
-
-namespace UIWidgetsGallery.gallery {
-    public class AnimationDemo : StatelessWidget {
-        public AnimationDemo(Key key = null) : base(key: key) {
-        }
-
-        public const string routeName = "/animation";
-
-        public override Widget build(BuildContext context) {
-            return new AnimationDemoHome();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d25cbc72fb760be8b6d73ebdc5bf600d1f44276aa9ea26fb550114412d65ff1
+size 420

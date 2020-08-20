@@ -1,5 +1,3 @@
-﻿It's the same as the regular "Bluetooth Terminal" demo but with Android to Android connection.
- One Android will work as a server and the other as a client. (This is One to One connection not one to many, but you can to tweak it).
- Notice that you need to work with a new property called UUID, check out the ServerClient.cs script.
-
-Note : 'ServerClient.cs' script is already attached to the 'InfoController' gameobject in the scene.
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e7d2a8a5202c1df0d9dfcde9f4bad44e1bd3f4c4b31583c7e47a041104840df
+size 437

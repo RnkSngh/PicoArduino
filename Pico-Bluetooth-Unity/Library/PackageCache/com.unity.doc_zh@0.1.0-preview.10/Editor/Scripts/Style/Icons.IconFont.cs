@@ -1,25 +1,3 @@
-using Unity.UIWidgets.ui;
-using UnityEngine;
-using Unity.UIWidgets.widgets;
-
-/**
- * Warning: DO NOT EDIT THIS GENERATED FILE
- * Call LoadIconFont only when initialize if you want to using IconFont Prefix Icon Data 
- */
-
-namespace Unity.DocZh.Style
-{
-    public static partial class Icons
-    {
-        public static void LoadIconFont()
-        {
-            FontManager.instance.addFont(Resources.Load<Font>("Fonts/IconFont"), "IconFont");
-        }
-        
-        
-        public static readonly IconData IconFontCopy = new IconData(0xf102, fontFamily: "IconFont");
-        
-        public static readonly IconData IconFontLoading = new IconData(0xf101, fontFamily: "IconFont");
-        
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8dc646a6bd2d488544a342b6a45fc23fcbb5dce6d658cbf4f13edc1a44729a39
+size 698

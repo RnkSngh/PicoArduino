@@ -1,19 +1,3 @@
-using System;
-
-namespace RSG.Exceptions {
-    /// <summary>
-    /// Exception thrown when an operation is performed on a promise that is in an invalid
-    /// state for it to handle.
-    /// </summary>
-    public class PromiseStateException : PromiseException {
-        public PromiseStateException() {
-        }
-
-        public PromiseStateException(string message) : base(message) {
-        }
-
-        public PromiseStateException(string message, Exception inner)
-            : base(message, inner) {
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:146376936deb2d3f59635333651fa9ad1fd8ab0123c46c313b8863b68db3686a
+size 538

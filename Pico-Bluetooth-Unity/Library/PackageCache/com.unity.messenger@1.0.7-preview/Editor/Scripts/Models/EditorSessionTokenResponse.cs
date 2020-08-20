@@ -1,19 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class EditorSessionTokenResponse
-    {
-        public string loginSessionToken { get; set; }
-        public string userId { get; set; }
-
-        public static EditorSessionTokenResponse FromJson(JsonValue json)
-        {
-            return new EditorSessionTokenResponse
-            {
-                loginSessionToken = json["LSToken"],
-                userId = json["userId"],
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6029e51b68904cddb97f73cc04a61a9fbfd6b2146a73982c149d6a5952aafd8
+size 486

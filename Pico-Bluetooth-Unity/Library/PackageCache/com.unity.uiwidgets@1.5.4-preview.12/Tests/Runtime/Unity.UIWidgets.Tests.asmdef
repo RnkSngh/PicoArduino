@@ -1,11 +1,3 @@
-{
-    "name": "Unity.UIWidgets.Tests",
-    "references": [
-        "Unity.UIWidgets"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:896ab570b5c1d605cfeb42d96d47d5f85d2226d661ffa592c885be736954baf7
+size 225

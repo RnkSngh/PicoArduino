@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML 
-        xmlns:engine="UnityEngine.Experimental.UIElements"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:schemaLocation="UnityEngine.Experimental.UIElements UIElementsSchema/UnityEngine.Experimental.UIElements.xsd">
-    <engine:VisualElement name="alertContainer" class="alert">
-        <engine:Label name="alertMessage"/>
-        <engine:Button name="close" text="Close" class="button"/>
-    </engine:VisualElement>
-</engine:UXML>
+version https://git-lfs.github.com/spec/v1
+oid sha256:488c02c5a7692ecf73fe0f6aa837a75db2e9f165bc47700cdbb39672135239f9
+size 524

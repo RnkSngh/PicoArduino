@@ -1,25 +1,3 @@
-using Unity.UIWidgets.Redux;
-
-namespace Unity.UIWidgets.Sample.Redux.ObjectFinder {
-    public static class StoreProvider {
-        static Store<FinderAppState> _store;
-
-        public static Store<FinderAppState> store {
-            get {
-                if (_store != null) {
-                    return _store;
-                }
-
-                var middlewares = new Middleware<FinderAppState>[] {
-                    ReduxLogging.create<FinderAppState>(),
-                    ReduxThunk.create<FinderAppState>(),
-                };
-                _store = new Store<FinderAppState>(ObjectFinderReducer.Reduce,
-                    new FinderAppState(),
-                    middlewares
-                );
-                return _store;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abe1e9c7b5620372ffc8ad404cd806f7931582908f06d5bb506d7b2d4006dcc3
+size 794

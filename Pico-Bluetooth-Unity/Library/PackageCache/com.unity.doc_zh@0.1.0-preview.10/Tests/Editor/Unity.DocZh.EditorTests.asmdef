@@ -1,13 +1,3 @@
-{
-    "name": "Unity.DocZh.EditorTests",
-    "references": [
-        "Unity.DocZh.Editor"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef30f3c4816aed9053c120d372acdbfd96e7f0bcec39db197db60819012006cc
+size 241

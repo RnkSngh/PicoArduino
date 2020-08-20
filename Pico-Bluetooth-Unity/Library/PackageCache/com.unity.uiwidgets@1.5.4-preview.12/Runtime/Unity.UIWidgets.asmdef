@@ -1,14 +1,3 @@
-{
-    "name": "Unity.UIWidgets",
-    "references": [
-        "Unity.InternalAPIEngineBridge.024"
-    ],
-    "optionalUnityReferences": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": true,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:37ed5830c36ebef1191a2364bb88e69a3788046fd8064eefd2ce61d6970f29a4
+size 360

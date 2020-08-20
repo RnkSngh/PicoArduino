@@ -1,18 +1,3 @@
-using Unity.UIWidgets.engine;
-using UnityEditor;
-using UnityEditor.UI;
-
-namespace Unity.UIWidgets.Editor {
-    [CustomEditor(typeof(UIWidgetsPanel), true)]
-    [CanEditMultipleObjects]
-    public class UIWidgetsPanelEditor : RawImageEditor {
-        public override void OnInspectorGUI() {
-            base.OnInspectorGUI();
-            var pixelRatioProperty = this.serializedObject.FindProperty("devicePixelRatioOverride");
-            var antiAliasingProperty = this.serializedObject.FindProperty("hardwareAntiAliasing");
-            EditorGUILayout.PropertyField(pixelRatioProperty);
-            EditorGUILayout.PropertyField(antiAliasingProperty);
-            this.serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:60b18eed0e2944638d999e55a6c5dfa20b43d0933455b95052a1bc14d8123a63
+size 748

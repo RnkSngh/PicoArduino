@@ -1,22 +1,3 @@
-using Unity.DocZh.Utility;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class HyperLink
-    {
-        private class HyperLinkState : State<HyperLink>
-        {
-            public override Widget build(BuildContext context)
-            {
-                return new Clickable(
-                    onTap: () => Bridge.HrefTo(widget._link),
-                    child: new Text(
-                        widget._text,
-                        style: widget._style
-                    )
-                );
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce33500e49cdd5d48ede025da3d81f5062f6323db39468c10fbc35eff17f2629
+size 570

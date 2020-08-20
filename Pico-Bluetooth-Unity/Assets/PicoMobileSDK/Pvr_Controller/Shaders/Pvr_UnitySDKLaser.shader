@@ -1,32 +1,3 @@
-
-Shader "Pvr_UnitySDK/Laser" {
-  Properties {
-    _MainTex ("Particle Texture", 2D) = "white" {}
-  }
-
-  Category {
-    Tags {
-      "Queue"="Overlay+100"
-      "IgnoreProjector"="True"
-      "RenderType"="Transparent"
-      "PreviewType"="Plane"
-    }
-
-    Blend SrcAlpha One
-    Cull Off Lighting Off ZWrite Off Fog { Color (0,0,0,0) }
-
-    BindChannels {
-      Bind "Color", color
-      Bind "Vertex", vertex
-      Bind "TexCoord", texcoord
-    }
-
-    SubShader {
-      Pass {
-        SetTexture [_MainTex] {
-          combine texture * primary
-        }
-      }
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7097b915c6314206ece8aa126487ed1f08bf2d6363f39f6ba57e240d6e3eb11
+size 609

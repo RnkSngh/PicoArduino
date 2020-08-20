@@ -1,32 +1,3 @@
-using System;
-
-namespace Unity.DocZh.Components
-{
-    public partial class SearchBar
-    {
-        public enum FilterType
-        {
-            all,
-            manual,
-            scripting,
-        }
-    }
-
-    internal static class FilterTypeExtension
-    {
-        public static string Text(this SearchBar.FilterType filterType)
-        {
-            switch (filterType)
-            {
-                case SearchBar.FilterType.all:
-                    return "所有";
-                case SearchBar.FilterType.manual:
-                    return "手册内容";
-                case SearchBar.FilterType.scripting:
-                    return "脚本API";
-                default:
-                    return string.Empty;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef335bc9026f2d33da7fa973850e28fb82bac0fe8626bc5d9f7689a823f8183c
+size 756

@@ -1,31 +1,3 @@
-Shader "UIWidgets/canvas_fill0"
-{
-    Properties {
-        _StencilComp("_StencilComp", Float) = 3 // - Equal, 8 - Always 
-    }
-   
-    SubShader {
-        ZTest Always
-        ZWrite Off
-        
-        Cull Off        
-        ColorMask 0
-        Stencil {
-            Ref 128
-            CompFront [_StencilComp]
-            CompBack [_StencilComp]
-            ReadMask 128
-            WriteMask 127
-            PassFront IncrWrap
-            PassBack DecrWrap
-        }
-            
-        Pass {
-            CGPROGRAM
-            #include "UIWidgets_canvas.cginc"
-            #pragma vertex vert
-            #pragma fragment frag_stencil
-            ENDCG
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c0623ab70922d11d81e8223d1f16bfa018614403a883192d60afd094dfea409e
+size 713

@@ -1,24 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using Unity.DocZh.Utility.Json;
-
-namespace Unity.DocZh.Models.Json
-{
-    public class Menu
-    {
-        public string title;
-        public string link;
-        public List<Menu> children;
-        public bool expanded;
-
-        public static Menu FromJson(JsonValue obj)
-        {
-            return new Menu
-            {
-                title = obj["title"],
-                link = obj["link"],
-                children = obj["children"].AsJsonArray?.Select(FromJson).ToList(),
-            };
-        } 
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f71d75360db315361ec4c113305b4889087c86f88ab19d2a41351b761e3647ac
+size 567

@@ -1,23 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class MessageCreateFrame : Frame
-    {
-        public Message data { get; set; }
-        public new static MessageCreateFrame FromJson(JsonValue json)
-        {
-            if (json.IsNull)
-            {
-                return null;
-            }
-            return new MessageCreateFrame
-            {
-                opCode = json["op"],
-                sequence = json["s"],
-                type = json["t"],
-                data = Message.FromJson(json["d"]),
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:827813d8134868409bbff92eb39aa42fb5245cf57e41bd3548bee487e50d16a4
+size 571

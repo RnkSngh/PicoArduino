@@ -1,18 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class Loading : StatefulWidget
-    {
-        public Loading(
-            float? size = null,
-            Key key = null) : base(key)
-        {
-            _size = size;
-        }
-
-        private readonly float? _size;
-        public override State createState() => new LoadingState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b9c9dc59781be4cc246076ddb465b36d5b2fc460fd0af26cf6a365244bcb5ea
+size 413

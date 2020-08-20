@@ -1,29 +1,3 @@
-using System.Collections.Generic;
-using Unity.UIWidgets.ui;
-using Unity.UIWidgets.widgets;
-
-namespace UIWidgetsSample {
-    public class PageViewSample : UIWidgetsSamplePanel {
-            
-        protected override Widget createWidget() {
-            return new WidgetsApp(
-                home: new Container(
-                width: 200,
-                height: 400,
-                child: new PageView(
-                    children: new List<Widget>() {
-                        new Container(
-                            color: new Color(0xFFE91E63)
-                        ),
-                        new Container(
-                            color: new Color(0xFF00BCD4)
-                        ),
-                        new Container(
-                            color: new Color(0xFF673AB7)
-                        )
-                    }
-                )),
-                pageRouteBuilder: this.pageRouteBuilder);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2652f86774f053287bebc54d5d772dd91ed5463dc15f13d015777bd4b0cc6a55
+size 971

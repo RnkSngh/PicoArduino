@@ -1,16 +1,3 @@
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class MarkdownContent : StatefulWidget
-    {
-        public MarkdownContent(string title) : base(new ObjectKey(title))
-        {
-            _title = title;
-        }
-
-        public override State createState() => new MarkdownContentState();
-
-        private readonly string _title;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd1374c25bfa4bf8819d92ac5a1bc8946cf198445ca4e3a6c7d651a50550aacb
+size 377

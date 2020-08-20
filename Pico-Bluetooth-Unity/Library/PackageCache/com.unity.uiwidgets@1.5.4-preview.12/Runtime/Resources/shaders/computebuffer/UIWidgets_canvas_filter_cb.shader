@@ -1,20 +1,3 @@
-Shader "UIWidgets/canvas_filter_cb"
-{
-    Properties {
-    }
-   
-    SubShader {
-        ZTest Always
-        ZWrite Off
-        
-        Pass { // 0, mask filter 
-            CGPROGRAM
-            #pragma require compute
-            #include "../UIWidgets_canvas.cginc"
-            #include "UIWidgets_canvas_cb.cginc"
-            #pragma vertex vert_compute
-            #pragma fragment frag_mf
-            ENDCG
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:500dbea536ba6b77c15ff28e2acfef9a736c9010373d1a06eb7f2e7a1a27f087
+size 453

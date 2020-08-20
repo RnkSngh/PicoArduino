@@ -1,4 +1,3 @@
-sceneSetups:
-- path: Assets/PicoMobileSDK/Pvr_Controller/Scenes/Pvr_Controller_UI 1.unity
-  isLoaded: 1
-  isActive: 1
+version https://git-lfs.github.com/spec/v1
+oid sha256:671ea70e820c7af6725fb83fa6a6d6dacb754b795b743e62593b5ff911d9fe52
+size 118

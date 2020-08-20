@@ -1,23 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class ChannelMember
-    {
-        public User user { get; set; }
-        public string role { get; set; }
-
-        public static ChannelMember FromJson(JsonValue json)
-        {
-            if (json.IsNull)
-            {
-                return null;
-            }
-            return new ChannelMember
-            {
-                user = User.FromJson(json["user"]),
-                role = json["role"],
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:521f825fe60b227fc77c4bbbe7c2b4841432169f433a7327063a02e3c871a1ba
+size 511

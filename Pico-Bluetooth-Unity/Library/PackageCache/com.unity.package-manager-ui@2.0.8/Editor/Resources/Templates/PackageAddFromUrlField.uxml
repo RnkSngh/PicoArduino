@@ -1,13 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML 
-        xmlns:engine="UnityEngine.Experimental.UIElements" 
-        xmlns:upm="UnityEditor.PackageManager.UI"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="UnityEngine.Experimental.UIElements UIElementsSchema/UnityEngine.Experimental.UIElements.xsd
-                            UnityEditor.PackageManager.UI UIElementsSchema/UnityEditor.PackageManager.UI.xsd">
-    <engine:VisualElement name="addFromUrlFieldContainer" focus-index="0">
-        <engine:TextField name="urlTextField"/>
-        <engine:Button name="addFromUrlButton" text="Add"/>
-    </engine:VisualElement>
-</engine:UXML>
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:689a30ac49ba756e066d523dd88343b650644dd3a77a7e682d69d9e75948a972
+size 697

@@ -1,19 +1,3 @@
-namespace Unity.UIWidgets.ui {
-    public partial class uiPath {
-
-        public enum uiPathShapeHint {
-            Rect,
-            Circle,
-            NaiveRRect,
-            Other
-        }
-
-        public bool isRect {
-            get { return this._shapeHint == uiPathShapeHint.Rect; }
-        }
-
-        public bool isCircle {
-            get { return this._shapeHint == uiPathShapeHint.Circle; }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcdd3d71d620f65afff42e84099cebf39750ac23e9683e3263efb128c592b5bc
+size 439

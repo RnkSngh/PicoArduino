@@ -1,25 +1,3 @@
-﻿using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class Scroller : StatefulWidget
-    {
-        public Scroller(
-            Widget child,
-            Key key = null
-        ) : base(key: key)
-        {
-            this.child = child;
-        }
-
-        private readonly Widget child;
-
-        public override State createState()
-        {
-            return new ScrollerState();
-        }
-    }
-
-    
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9135fdf6b812a315ecb6cded931a877c1b553af7fb8fada11a3c8e51c71f55e3
+size 476

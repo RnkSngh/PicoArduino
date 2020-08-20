@@ -1,12 +1,3 @@
-{
-    "name": "Unity.Analytics.DataPrivacy",
-    "references": [],
-    "optionalUnityReferences": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9bf50872474206eb3bc008921ba44dbb562743f5419aa0d086a4ba2f7a0557f
+size 322

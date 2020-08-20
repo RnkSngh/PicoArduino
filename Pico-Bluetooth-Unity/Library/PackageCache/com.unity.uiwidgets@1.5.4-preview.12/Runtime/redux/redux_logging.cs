@@ -1,19 +1,3 @@
-using UnityEngine;
-
-namespace Unity.UIWidgets.Redux {
-    public static class ReduxLogging {
-        public static Middleware<State> create<State>() {
-            return (store) => (next) => new DispatcherImpl((action) => {
-                var previousState = store.getState();
-                var previousStateDump = JsonUtility.ToJson(previousState);
-                var result = next.dispatch(action);
-                var afterState = store.getState();
-                var afterStateDump = JsonUtility.ToJson(afterState);
-                Debug.LogFormat("Action name={0} data={1}", action.ToString(), JsonUtility.ToJson(action));
-                Debug.LogFormat("previousState=\n{0}", previousStateDump);
-                Debug.LogFormat("afterState=\n{0}", afterStateDump);
-                return result;
-            });
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:83e83b599ca902175060c895e8a3617f761aa0e7ff53c10149f1ebfed2d1fa03
+size 859

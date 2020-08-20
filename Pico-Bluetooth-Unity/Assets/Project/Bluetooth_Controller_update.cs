@@ -1,28 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class Bluetooth_Controller_update : MonoBehaviour
-{
-    public Text ChangingText;
-    public GameObject changingTextTwo;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void TextChange()
-    {
-         ChangingText.text = "2";
-        changingTextTwo.GetComponent<Text>().text = "2";
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d8d63182c4f3d4d503b4d7bff7e069a1714220e1c638b1a92116a3d31eaebfc
+size 560

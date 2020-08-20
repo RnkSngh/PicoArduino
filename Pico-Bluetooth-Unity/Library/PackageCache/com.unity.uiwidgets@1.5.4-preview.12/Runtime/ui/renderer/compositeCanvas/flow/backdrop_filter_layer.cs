@@ -1,26 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.ui;
-
-namespace Unity.UIWidgets.flow {
-    public class BackdropFilterLayer : ContainerLayer {
-        ImageFilter _filter;
-
-        public ImageFilter filter {
-            set { this._filter = value; }
-        }
-
-        public override void paint(PaintContext context) {
-            D.assert(this.needsPainting);
-
-            var canvas = context.canvas;
-            canvas.saveLayer(this.paintBounds, new Paint {backdrop = this._filter});
-
-            try {
-                this.paintChildren(context);
-            }
-            finally {
-                canvas.restore();
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b641b0f397795c7829975e496e510e98ad1866f832491fa1c16d048962096b1
+size 687

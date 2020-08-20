@@ -1,27 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class GetMembersResponse
-    {
-        public List<ChannelMember> list { get; set; }
-        public int total { get; set; }
-
-        public static GetMembersResponse FromJson(JsonValue json)
-        {
-            if (json.IsNull)
-            {
-                return null;
-            }
-            return new GetMembersResponse
-            {
-                list = json["list"].AsJsonArray?
-                    .Select(ChannelMember.FromJson)
-                    .ToList(),
-                total = json["total"],
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:535437820fc7a259c142d18e993ad754314b2747d4eab136216e2b20506c10f9
+size 674

@@ -1,14 +1,3 @@
-{
-    "name": "Unity.InternalAPIEditorBridge.023",
-    "references": [],
-    "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:adafaa7f93d4c3306c5661e6c053935b7d422dc76e12fc389f2393a785a1ac6f
+size 339

@@ -1,27 +1,3 @@
-﻿// Copyright  2015-2020 Pico Technology Co., Ltd. All Rights Reserved.
-
-
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CLoadingAsset : ScriptableObject
-{
-    public int SplashScreenType;
-    //Splash Image
-    public List<Texture2D> splashImage = new List<Texture2D>();
-    public Texture2D Inside_background;
-
-    //SplashText
-    public bool UseSplashText;
-    public string DefaultText;
-    public string ChineseText;
-    public string EnglishText;
-    public string JapaneseText;
-    public string KoreanText;
-    //other
-    public string FontSize;
-    public Color FontColor;
-    public string TextHeight;
-    public bool UseCarousel;
-    public int SplashTextAlignment;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a860dce310fb638e9f9789fce7a95073545bba634619be56c24314b4b287c2e
+size 730

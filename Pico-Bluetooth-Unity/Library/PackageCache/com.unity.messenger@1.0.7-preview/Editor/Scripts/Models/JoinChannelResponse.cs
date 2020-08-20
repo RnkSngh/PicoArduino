@@ -1,23 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class JoinChannelResponse
-    {
-        public ChannelMember member { get; set; }
-        public Channel channel { get; set; }
-
-        public static JoinChannelResponse FromJson(JsonValue json)
-        {
-            if (json.IsNull)
-            {
-                return null;
-            }
-            return new JoinChannelResponse
-            {
-                member = ChannelMember.FromJson(json["member"]),
-                channel = Channel.FromJson(json["channel"]),
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad00f15ff21041d6fd553c01bb7db8432c3f67eb1852494befc9db1df4f520af
+size 581

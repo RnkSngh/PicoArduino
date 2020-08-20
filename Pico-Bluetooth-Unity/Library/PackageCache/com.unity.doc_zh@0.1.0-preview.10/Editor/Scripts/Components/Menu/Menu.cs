@@ -1,16 +1,3 @@
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class Menu : StatefulWidget
-    {
-        public Menu(MenuType type) : base(new ObjectKey("menu"))
-        {
-            _type = type;
-        }
-
-        private readonly MenuType _type;
-
-        public override State createState() => new MenuState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92c6a1f42a3e809451445d1c72a31b7d74607ada5cf84137c91f1e2b924d087d
+size 345

@@ -1,25 +1,3 @@
-using System.Web;
-using UnityEngine;
-
-namespace Unity.DocZh.Utility
-{
-    public static class LocationUtil
-    {
-        public static void Go(string path)
-        {
-            var appendedPrefix = $"{Configuration.Instance.pageBase}{path}";
-            ObservableUtil.currentPath.value = appendedPrefix;
-            Bridge.LocationPush(appendedPrefix);
-        }
-
-        public static void HrefTo(string path)
-        {
-            Bridge.HrefTo(path);
-        }
-
-        public static void Download(string path, string filename)
-        {
-            Bridge.Download(path, filename);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c4e636ee175a29757c2b2a6aab0e47e26462d18cf3d862092196d2fa6580fade
+size 605

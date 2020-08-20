@@ -1,13 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML 
-        xmlns:engine="UnityEngine.Experimental.UIElements"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="UnityEngine.Experimental.UIElements UIElementsSchema/UnityEngine.Experimental.UIElements.xsd">
-    <engine:VisualElement name="groupContainerOuter">
-        <engine:VisualElement name="headerContainer">
-            <engine:Label name="headerTitle" text="Default" />
-        </engine:VisualElement>
-
-        <engine:VisualElement name="groupContainer" />
-    </engine:VisualElement>
-</engine:UXML>
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a78789ae1141074cb7385d85cc954ec2427e4240407101b43ab266ee466878b
+size 612

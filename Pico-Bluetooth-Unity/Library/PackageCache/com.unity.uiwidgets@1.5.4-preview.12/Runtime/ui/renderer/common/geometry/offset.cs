@@ -1,25 +1,3 @@
-namespace Unity.UIWidgets.ui {
-    public struct uiOffset {
-        public uiOffset(float dx, float dy) {
-            this.dx = dx;
-            this.dy = dy;
-        }
-
-        public readonly float dx;
-        public readonly float dy;
-
-        public static uiOffset? fromOffset(Offset offset) {
-            if (offset == null) {
-                return null;
-            }
-
-            var newOffset = new uiOffset(offset.dx, offset.dy);
-            return newOffset;
-        }
-
-
-        public static uiOffset operator -(uiOffset a) {
-            return new uiOffset(-a.dx, -a.dy);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f3f49154fcdd900119de8aadbe86c227b9c605c78232cada83d6818c51e9a87
+size 626

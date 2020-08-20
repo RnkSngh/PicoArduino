@@ -1,16 +1,3 @@
-﻿Shader "Pvr_UnitySDK/Fade" {
-	Properties{
-		 _Color("Color", Color) = (0,0,0,1)
-	}
-		SubShader{
-		Tags{ "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent" }
-		LOD 100
-
-		ZWrite Off
-		ZTest Always
-		Blend SrcAlpha OneMinusSrcAlpha
-		Color[_Color]
-
-		Pass{}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7281918aa81aa269d793d01b1e3ee517a71cf2460dd75fc002d9b3bf7b3e5a2
+size 307

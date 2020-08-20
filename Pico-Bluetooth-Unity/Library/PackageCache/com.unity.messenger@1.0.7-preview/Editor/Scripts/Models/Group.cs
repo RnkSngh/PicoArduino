@@ -1,21 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class Group
-    {
-        public string id { get; set; }
-        public string description { get; set; }
-        public string privacy { get; set; }
-
-        public static Group FromJson(JsonValue json)
-        {
-            return new Group
-            {
-                id = json["id"],
-                description = json["description"],
-                privacy = json["privacy"],
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d012d1a4f0450d0bc2d2b463f7e574a9035cd1a8f68e4684f611abafef67f123
+size 490

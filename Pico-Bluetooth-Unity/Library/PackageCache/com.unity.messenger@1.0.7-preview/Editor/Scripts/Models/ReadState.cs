@@ -1,23 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class ReadState
-    {
-        public string channelId { get; set; }
-        public string lastMentionId { get; set; }
-        public string lastMessageId { get; set; }
-        public int mentionCount { get; set; }
-
-        public static ReadState FromJson(JsonValue json)
-        {
-            return new ReadState
-            {
-                channelId = json["channelId"],
-                lastMentionId = json["lastMentionId"],
-                lastMessageId = json["lastMessageId"],
-                mentionCount = json["mentionCount"],
-            };
-        } 
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7bb727bd3d81c03b5e17900c9c495ba731dac6becb530535cf3a5d699422dbe7
+size 647

@@ -1,19 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class Embed
-    {
-        public EmbedData embedData { get; set; }
-        public string embedType { get; set; }
-
-        public static Embed FromJson(JsonValue json)
-        {
-            return new Embed
-            {
-                embedData = EmbedData.FromJson(json["embedData"]),
-                embedType = json["embedType"],
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d454e6fac7d9631435af63e1aac06465e8cbd2477f1e44377ae80773047b7735
+size 441

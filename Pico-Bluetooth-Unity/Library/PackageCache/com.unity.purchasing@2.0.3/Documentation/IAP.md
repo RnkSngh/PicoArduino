@@ -1,16 +1,3 @@
-# Unity In-App Purchasing (IAP)
-
-Unity IAP makes it easy to implement in-app purchases in your application across the most popular App stores.
-
-Supported platforms include:
-
-* iOS App Store
-* Mac App Store
-* Google Play
-* Universal Windows Platform
-* Amazon Appstore
-* Samsung Galaxy Apps
-* Tizen Store
-* CloudMoolah Store
-* Facebook Gameroom
-* Xiaomi Mi Game Pay
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9f64da1e9206fabfc4d2c29e39eec21545c0a4a8414973323573580dd541f72
+size 363

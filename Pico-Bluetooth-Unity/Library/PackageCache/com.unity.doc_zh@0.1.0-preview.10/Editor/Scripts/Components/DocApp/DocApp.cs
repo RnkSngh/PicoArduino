@@ -1,21 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public class DocApp : StatefulWidget
-    {
-        public DocApp(Key key = null) : base(key)
-        {
-        }
-        
-        public static DocAppState of(BuildContext context)
-        {
-            var result =
-                (DocAppState) context.ancestorStateOfType(new TypeMatcher<DocAppState>());
-            return result;
-        }
-
-        public override State createState() => new DocAppState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e10bdb8cf32a10e24c5d22e89bbfb9646d2bc85a6948e9223b36834b5f61cdb
+size 523

@@ -1,9 +1,3 @@
-To learn from the demos use them in the following order :
-
-1) Basic demo.
-2) Automatic Connection.
-3) Bluetooth Terminal.
-
-Then choose whatever you want!
-
-Note : The 'BtConnector' gameobject is added to every scene, so no need to do this step. 
+version https://git-lfs.github.com/spec/v1
+oid sha256:93f1f00724731467ceb6b8622c4a8b051cd629b54ae05bf9ee7755ed4d9fe1aa
+size 244

@@ -1,9 +1,3 @@
-﻿{
-	"name": "UIWidgetsTheatre",
-	"references": [
-			"Unity.UIWidgets",
-			"UIWidgetsGallery",
-			"UIWidgetsSample"],
-	"includePlatforms": [],
-	"excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7c00f5095cb34322c8eaf0b2404723bd70fc94ec59ac524e374b131b2c39c91
+size 179

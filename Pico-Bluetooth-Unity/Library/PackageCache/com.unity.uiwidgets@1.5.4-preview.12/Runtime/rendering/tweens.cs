@@ -1,16 +1,3 @@
-using Unity.UIWidgets.animation;
-using Unity.UIWidgets.painting;
-
-namespace Unity.UIWidgets.rendering {
-    public class AlignmentTween : Tween<Alignment> {
-        public AlignmentTween(
-            Alignment begin = null,
-            Alignment end = null)
-            : base(begin: begin, end: end) {
-        }
-
-        public override Alignment lerp(float t) {
-            return Alignment.lerp(this.begin, this.end, t);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:30cba1cec89ef0ca9d35746bf67f9431dc20ffed6f1ad29fc501255f23c94234
+size 456

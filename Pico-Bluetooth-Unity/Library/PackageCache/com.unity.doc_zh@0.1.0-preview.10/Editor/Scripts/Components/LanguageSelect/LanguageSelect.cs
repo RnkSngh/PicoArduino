@@ -1,25 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.ui;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class LanguageSelect : StatefulWidget
-    {
-        public LanguageSelect(
-            Color selectTextColor = null,
-            Color underlineColor = null,
-            Color expandIconColor = null,
-            Key key = null) : base(key)
-        {
-            _selectTextColor = selectTextColor;
-            _underlineColor = underlineColor;
-            _expandIconColor = expandIconColor;
-        }
-
-        private readonly Color _selectTextColor;
-        private readonly Color _underlineColor;
-        private readonly Color _expandIconColor;
-        public override State createState() => new LanguageSelectState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:864d137d41d3661894e9f5717fa3e2421265cb13e74c14bcf06665224424a73f
+size 776

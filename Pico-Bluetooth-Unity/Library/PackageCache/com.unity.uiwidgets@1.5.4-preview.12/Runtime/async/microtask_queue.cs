@@ -1,26 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Unity.UIWidgets.foundation;
-using UnityEngine;
-
-namespace Unity.UIWidgets.async {
-    public class MicrotaskQueue {
-        readonly Queue<Action> _queue = new Queue<Action>();
-
-        public void scheduleMicrotask(Action action) {
-            this._queue.Enqueue(action);
-        }
-
-        public void flushMicrotasks() {
-            while (this._queue.isNotEmpty()) {
-                var action = this._queue.Dequeue();
-                try {
-                    action();
-                }
-                catch (Exception ex) {
-                    D.logError("Error to execute microtask: ", ex);
-                }
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:637662b99b45753f3efb218cb0aa4bdbbc8d487d0087881255716f22180b798f
+size 729

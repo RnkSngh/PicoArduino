@@ -1,6 +1,3 @@
-{
-    "name": "UIWidgetsGallery",
-    "references": ["Unity.UIWidgets"],
-    "includePlatforms": [],
-    "excludePlatforms": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:caefe404f1c653c3c5cba480cb05a008d4096037ce15ba19bbb95d6140a6a91d
+size 136

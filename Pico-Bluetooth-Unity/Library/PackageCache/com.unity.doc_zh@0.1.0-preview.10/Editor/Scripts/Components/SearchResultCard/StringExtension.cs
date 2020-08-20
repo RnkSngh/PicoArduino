@@ -1,14 +1,3 @@
-namespace Unity.DocZh.Components
-{
-    internal partial class StringExtension
-    {
-        public static string FirstCharToUpper(this string s)
-        {
-            if (string.IsNullOrEmpty(s))
-            {
-                return string.Empty;
-            }
-            return char.ToUpper(s[0]) + s.Substring(1);  
-        }  
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:678fc71ba28c5ec5a0ec28900dc9d8032acea76fb5ca3370d8401551b5b87f7c
+size 338

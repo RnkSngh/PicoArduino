@@ -1,28 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.rendering;
-
-namespace Unity.UIWidgets.widgets {
-    public delegate Widget OrientationWidgetBuilder(BuildContext context, Orientation orientation);
-
-    public class OrientationBuilder : StatelessWidget {
-        public OrientationBuilder(
-            OrientationWidgetBuilder builder,
-            Key key = null
-        ) : base(key: key) {
-            D.assert(builder != null);
-            this.builder = builder;
-        }
-
-        public readonly OrientationWidgetBuilder builder;
-
-        Widget _buildWithConstraints(BuildContext context, BoxConstraints constraints) {
-            Orientation orientation =
-                constraints.maxWidth > constraints.maxHeight ? Orientation.landscape : Orientation.portrait;
-            return this.builder(context, orientation);
-        }
-
-        public override Widget build(BuildContext context) {
-            return new LayoutBuilder(builder: this._buildWithConstraints);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:237c2c455a485c10bb8739dd032b63a480f8d79d797d41c4a6aba0f6761a0a3d
+size 1025

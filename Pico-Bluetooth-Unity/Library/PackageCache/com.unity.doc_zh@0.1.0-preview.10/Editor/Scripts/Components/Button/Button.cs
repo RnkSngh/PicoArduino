@@ -1,33 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.gestures;
-using Unity.UIWidgets.widgets;
-
-namespace Unity.DocZh.Components
-{
-    public partial class Button : StatefulWidget
-    {
-        public Button(
-            Key key = null,
-            GestureTapCallback onTap = null,
-            string text = null,
-            IconData prefix = null,
-            IconData suffix = null
-        ) : base(key)
-        {
-            _onTap = onTap;
-            _text = text;
-            _prefix = prefix;
-            _suffix = suffix;
-        }
-
-        private readonly GestureTapCallback _onTap;
-
-        private readonly string _text;
-
-        private readonly IconData _prefix;
-
-        private readonly IconData _suffix;
-
-        public override State createState() => new ButtonState();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3def0b0e604def85a75ba93ade494fb4b73de64b4d9b2667fd617213e0191f1c
+size 798

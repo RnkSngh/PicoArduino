@@ -1,22 +1,3 @@
-{
-    "name": "UIWidgetsSample.Editor",
-    "references": [
-        "Unity.UIWidgets.Editor",
-        "Unity.UIWidgets",
-        "UIWidgetsSample",
-        "UIWidgetsGallery"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5af58347fecaf9137ec6f4bf595e17103c1fd473ce9db12ebdef9281d20a389e
+size 525

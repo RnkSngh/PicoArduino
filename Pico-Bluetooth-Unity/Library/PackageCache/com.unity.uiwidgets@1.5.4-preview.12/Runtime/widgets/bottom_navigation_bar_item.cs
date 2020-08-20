@@ -1,27 +1,3 @@
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.ui;
-
-namespace Unity.UIWidgets.widgets {
-    public class BottomNavigationBarItem {
-        public BottomNavigationBarItem(
-            Widget icon = null,
-            Widget title = null,
-            Widget activeIcon = null,
-            Color backgroundColor = null
-        ) {
-            D.assert(icon != null);
-            this.icon = icon;
-            this.activeIcon = activeIcon ?? icon;
-            this.title = title;
-            this.backgroundColor = backgroundColor;
-        }
-
-        public readonly Widget icon;
-
-        public readonly Widget activeIcon;
-
-        public readonly Widget title;
-
-        public readonly Color backgroundColor;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca374c3c7b7975c2a7f45e586effc7c90be88983335ce8c9178bf05a7c082d7c
+size 748

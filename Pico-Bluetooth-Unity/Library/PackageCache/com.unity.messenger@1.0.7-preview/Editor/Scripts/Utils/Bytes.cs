@@ -1,26 +1,3 @@
-using System;
-
-namespace Unity.Messenger
-{
-    public partial class Utils
-    {
-        public static string ReadableSize(int size)
-        {
-            if (size < 1024)
-            {
-                return $"{size}B";
-            }
-            if (size < 1024 * 1024)
-            {
-                return $"{Math.Round(size / 1024f, 2)}K";
-            }
-
-            if (size < 1024 * 1024 * 1024)
-            {
-                return $"{Math.Round(size / 1024f / 1024f, 2)}M";
-            }
-
-            return $"{Math.Round(size / 1024f / 1024f / 1024f, 2)}G";
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5df5688b7b4972012bca26011d674c8cc872402c10fc87c1b0f29dfea326b94a
+size 582

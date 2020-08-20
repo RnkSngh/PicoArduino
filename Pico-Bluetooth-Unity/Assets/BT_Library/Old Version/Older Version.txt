@@ -1,5 +1,3 @@
-The BT library now is the main Library of this Asset, which is completly different from the old library. 
-
-Please if you want to go back to the old version, it's available as a Unity package inside the "Old Version" folder.
-
-Warning : If you want to import the Old Version back, make sure you deleted this newer version, because they can't co-exist.
+version https://git-lfs.github.com/spec/v1
+oid sha256:42b1743d11cb7542e28f994a42c135dce2d2d77d98f716ee815ebeff03a6eb80
+size 350

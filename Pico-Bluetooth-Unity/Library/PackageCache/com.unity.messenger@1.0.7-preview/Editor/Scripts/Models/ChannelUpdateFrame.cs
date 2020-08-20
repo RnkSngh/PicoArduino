@@ -1,24 +1,3 @@
-using Unity.Messenger.Json;
-
-namespace Unity.Messenger.Models
-{
-    public class ChannelUpdateFrame : Frame
-    {
-        public Channel data { get; set; }
-
-        public new static ChannelUpdateFrame FromJson(JsonValue json)
-        {
-            if (json.IsNull)
-            {
-                return null;
-            }
-            return new ChannelUpdateFrame
-            {
-                opCode = json["op"],
-                sequence = json["s"],
-                type = json["t"],
-                data = Channel.FromJson(json["d"]),
-            };
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe3a6d5767e54686a0279dc8e185b49c7d957f511556d0e2be01365376c5bb08
+size 572
