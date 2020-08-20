@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a1e61d87eea6834bcb76dd1d984fda30865c6cf941c4e932a302ba1b76de6e2
-size 393
+This directory contains the Unity project used to build the Pico-Arduino-Controller.apk file. The scene contains a [Pico controller and controller tips prefab](./Assets/PicoMobileSDK/Pvr_Controller/Prefabs) and a [UI canvas prefab](./Assets/VisualController.prefab). A built version of the [Pico-Arduino-Controller.apk](./Pico-Arduino-Controller.apk) file is also included in this directory. 
